@@ -1,0 +1,12 @@
+[package]
+name = "Users"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4"        # Web framework
+dotenvy = "0.15"       # .env support
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }  # HTTP client with JSON & TLS
+serde = { version = "1.0", features = ["derive"] }  # Serialization/deserialization
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] } # Async runtime (required by actix & reqwest)
+bcrypt 
